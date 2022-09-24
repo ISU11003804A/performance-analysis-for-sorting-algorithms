@@ -32,7 +32,7 @@ int main()
 {
     //int array[6] = {5,3,1,2,6,4};
     //float array[6] = {5.2,3.3,1.3,2.6,6.2,4.1};
-    string array[6] = {"a","e","f","d","b","c"};
+    //string array[6] = {"a","e","f","d","b","c"};
     cout << "original:" << endl;
     PrintArray(array,6);
 
