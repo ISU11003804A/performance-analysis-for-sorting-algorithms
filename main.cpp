@@ -118,5 +118,6 @@ int main()
         merge_sort_string(data_value[i]);
     }
     
+    system("pause");
     return 0;
 }
