@@ -8,9 +8,9 @@
 using namespace std;
 using namespace chrono;
 
-void insertion_sort_int(int size)
+void merge_sort_int(int size)
 {
-	cout << "<< insertion sort (int) " << size << "筆測試資料 >>" << endl;
+    cout << "<< merge sort (int) " << size << "筆測試資料 >>" << endl;
 
 	//隨機生成數字陣列
 	random_device rd;
@@ -34,7 +34,7 @@ void insertion_sort_int(int size)
 		{
 			auto start=system_clock::now();
 
-			InsertionSort(array,size);
+			MergeSort(array,size);
 
 			auto end=system_clock::now();
 			auto duration=duration_cast<microseconds>(end-start);
@@ -53,7 +53,7 @@ void insertion_sort_int(int size)
 	{
 		auto start=system_clock::now();
 
-		InsertionSort(array,size);
+		MergeSort(array,size);
 
 		auto end=system_clock::now();
 		auto duration=duration_cast<microseconds>(end-start);
@@ -69,14 +69,14 @@ void insertion_sort_int(int size)
 	}
 }
 
-void insertion_sort_long(int size)
+void merge_sort_long(int size)
 {
-	cout << "<< insertion sort (long) " << size << "筆測試資料 >>" << endl;
-	
+	cout << "<< merge sort (long) " << size << "筆測試資料 >>" << endl;
+
 	//隨機生成數字陣列
 	random_device rd;
 	mt19937 gen(rd());
-	uniform_int_distribution<long long>dist(1000000000,9000000000); 
+	uniform_int_distribution<long long>dist(1000000000,9000000000);
 	
 	long long *array=new long long[size];
 	for (int i=0;i<size;i++)
@@ -95,7 +95,7 @@ void insertion_sort_long(int size)
 		{
 			auto start=system_clock::now();
 
-			InsertionSort(array,size);
+			MergeSort(array,size);
 
 			auto end=system_clock::now();
 			auto duration=duration_cast<microseconds>(end-start);
@@ -114,7 +114,7 @@ void insertion_sort_long(int size)
 	{
 		auto start=system_clock::now();
 
-		InsertionSort(array,size);
+		MergeSort(array,size);
 
 		auto end=system_clock::now();
 		auto duration=duration_cast<microseconds>(end-start);
@@ -130,9 +130,9 @@ void insertion_sort_long(int size)
 	}
 }
 
-void insertion_sort_float(int size)
+void merge_sort_float(int size)
 {
-	cout << "<< insertion sort (float) " << size << "筆測試資料 >>" << endl;
+	cout << "<< merge sort (float) " << size << "筆測試資料 >>" << endl;
 	
 	//隨機生成數字陣列
 	random_device rd;
@@ -156,7 +156,7 @@ void insertion_sort_float(int size)
 		{
 			auto start=system_clock::now();
 
-			InsertionSort(array,size);
+			MergeSort(array,size);
 
 			auto end=system_clock::now();
 			auto duration=duration_cast<microseconds>(end-start);
@@ -175,7 +175,7 @@ void insertion_sort_float(int size)
 	{
 		auto start=system_clock::now();
 
-		InsertionSort(array,size);
+		MergeSort(array,size);
 
 		auto end=system_clock::now();
 		auto duration=duration_cast<microseconds>(end-start);
@@ -191,9 +191,9 @@ void insertion_sort_float(int size)
 	}
 }
 
-void insertion_sort_double(int size)
+void merge_sort_double(int size)
 {
-	cout << "<< insertion sort (double) " << size << "筆測試資料 >>" << endl;
+	cout << "<< merge sort (double) " << size << "筆測試資料 >>" << endl;
 	
 	//隨機生成數字陣列
 	random_device rd;
@@ -217,7 +217,7 @@ void insertion_sort_double(int size)
 		{
 			auto start=system_clock::now();
 
-			InsertionSort(array,size);
+			MergeSort(array,size);
 
 			auto end=system_clock::now();
 			auto duration=duration_cast<microseconds>(end-start);
@@ -236,7 +236,7 @@ void insertion_sort_double(int size)
 	{
 		auto start=system_clock::now();
 
-		InsertionSort(array,size);
+		MergeSort(array,size);
 
 		auto end=system_clock::now();
 		auto duration=duration_cast<microseconds>(end-start);
@@ -252,9 +252,9 @@ void insertion_sort_double(int size)
 	}
 }
 
-void insertion_sort_string(int size)
+void merge_sort_string(int size)
 {
-	cout << "<< insertion sort (string) " << size << "筆測試資料 >>" << endl;
+	cout << "<< merge sort (string) " << size << "筆測試資料 >>" << endl;
 
 	//隨機生成數字陣列
 	srand(time(NULL));
@@ -276,7 +276,7 @@ void insertion_sort_string(int size)
 	//開始排序
 	auto start=system_clock::now();
 	
-	InsertionSort(array,size);
+	MergeSort(array,size);
 	
 	auto end=system_clock::now();
 	auto duration=duration_cast<microseconds>(end-start);
