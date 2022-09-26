@@ -254,7 +254,7 @@ void selection_sort_double(int size)
 
 void selection_sort_string(int size)
 {
-    cout << "<< insertion sort (string) " << size << "筆測試資料 >>" << endl;
+    cout << "<< selection sort (string) " << size << "筆測試資料 >>" << endl;
 
 	//隨機生成數字陣列
 	srand(time(NULL));
