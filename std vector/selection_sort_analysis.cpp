@@ -4,23 +4,23 @@
 #include<chrono>
 #include<iomanip>
 #include<random>
-#include<ctime>
+#include<vector>
 using namespace std;
 using namespace chrono;
 
-void insertion_sort_int(int size)
+void selection_sort_int(int size)
 {
-	cout << "<< insertion sort (int) " << size << "筆測試資料 >>" << endl;
+	cout << "<< selection sort (int) " << size << "筆測試資料 >>" << endl;
 
 	//隨機生成數字陣列
 	random_device rd;
 	mt19937 gen(rd());
 	uniform_int_distribution<>dist(1,2000000000);
 	
-	int *array=new int[size];
+    vector<int> array;
 	for (int i=0;i<size;i++)
 	{
-		array[i]=dist(gen);
+		array.push_back(dist(gen));
 	}
 	
 	// cout << "隨機生成的陣列:";
@@ -34,7 +34,7 @@ void insertion_sort_int(int size)
 		{
 			auto start=system_clock::now();
 
-			InsertionSort(array,size);
+			SelectionSort(array,size);
 
 			auto end=system_clock::now();
 			auto duration=duration_cast<microseconds>(end-start);
@@ -47,13 +47,12 @@ void insertion_sort_int(int size)
 
 		cout << "排序花費時間:";
 		cout << fixed << setprecision(100) << time/1000000 << "秒" << endl;
-    	delete [] array;
 	}
 	else
 	{
 		auto start=system_clock::now();
 
-		InsertionSort(array,size);
+		SelectionSort(array,size);
 
 		auto end=system_clock::now();
 		auto duration=duration_cast<microseconds>(end-start);
@@ -65,23 +64,22 @@ void insertion_sort_int(int size)
 
 		cout << "排序花費時間:";
 		cout << fixed << setprecision(100) << time << "秒" << endl;
-    	delete [] array;
 	}
 }
 
-void insertion_sort_long(int size)
+void selection_sort_long(int size)
 {
-	cout << "<< insertion sort (long) " << size << "筆測試資料 >>" << endl;
+	cout << "<< selection sort (long) " << size << "筆測試資料 >>" << endl;
 	
 	//隨機生成數字陣列
 	random_device rd;
 	mt19937 gen(rd());
 	uniform_int_distribution<long long>dist(1000000000,9000000000); 
 	
-	long long *array=new long long[size];
+	vector<long long> array;
 	for (int i=0;i<size;i++)
 	{
-		array[i]=dist(gen);
+		array.push_back(dist(gen));
 	}
 	
 	// cout << "隨機生成的陣列:";
@@ -95,7 +93,7 @@ void insertion_sort_long(int size)
 		{
 			auto start=system_clock::now();
 
-			InsertionSort(array,size);
+			SelectionSort(array,size);
 
 			auto end=system_clock::now();
 			auto duration=duration_cast<microseconds>(end-start);
@@ -108,13 +106,12 @@ void insertion_sort_long(int size)
 
 		cout << "排序花費時間:";
 		cout << fixed << setprecision(100) << time/1000000 << "秒" << endl;
-    	delete [] array;
 	}
 	else
 	{
 		auto start=system_clock::now();
 
-		InsertionSort(array,size);
+		SelectionSort(array,size);
 
 		auto end=system_clock::now();
 		auto duration=duration_cast<microseconds>(end-start);
@@ -126,23 +123,22 @@ void insertion_sort_long(int size)
 
 		cout << "排序花費時間:";
 		cout << fixed << setprecision(100) << time << "秒" << endl;
-    	delete [] array;
 	}
 }
 
-void insertion_sort_float(int size)
+void selection_sort_float(int size)
 {
-	cout << "<< insertion sort (float) " << size << "筆測試資料 >>" << endl;
+	cout << "<< selection sort (float) " << size << "筆測試資料 >>" << endl;
 	
 	//隨機生成數字陣列
 	random_device rd;
 	mt19937 gen(rd());
 	uniform_real_distribution<float>dist(1,10000);
 	
-	float *array=new float[size];
+	vector<float> array;
 	for (int i=0;i<size;i++)
 	{
-		array[i]=dist(gen);
+		array.push_back(dist(gen));
 	}
 	
 	// cout << "隨機生成的陣列:";
@@ -156,7 +152,7 @@ void insertion_sort_float(int size)
 		{
 			auto start=system_clock::now();
 
-			InsertionSort(array,size);
+			SelectionSort(array,size);
 
 			auto end=system_clock::now();
 			auto duration=duration_cast<microseconds>(end-start);
@@ -169,13 +165,12 @@ void insertion_sort_float(int size)
 
 		cout << "排序花費時間:";
 		cout << fixed << setprecision(100) << time/1000000 << "秒" << endl;
-    	delete [] array;
 	}
 	else
 	{
 		auto start=system_clock::now();
 
-		InsertionSort(array,size);
+		SelectionSort(array,size);
 
 		auto end=system_clock::now();
 		auto duration=duration_cast<microseconds>(end-start);
@@ -187,23 +182,22 @@ void insertion_sort_float(int size)
 
 		cout << "排序花費時間:";
 		cout << fixed << setprecision(100) << time << "秒" << endl;
-    	delete [] array;
 	}
 }
 
-void insertion_sort_double(int size)
+void selection_sort_double(int size)
 {
-	cout << "<< insertion sort (double) " << size << "筆測試資料 >>" << endl;
+	cout << "<< selection sort (double) " << size << "筆測試資料 >>" << endl;
 	
 	//隨機生成數字陣列
 	random_device rd;
 	mt19937 gen(rd());
 	uniform_real_distribution<double>dist(1,10000);
 	
-	double *array=new double[size];
+	vector<double> array;
 	for (int i=0;i<size;i++)
 	{
-		array[i]=dist(gen);
+		array.push_back(dist(gen));
 	}
 	
 	// cout << "隨機生成的陣列:";
@@ -217,7 +211,7 @@ void insertion_sort_double(int size)
 		{
 			auto start=system_clock::now();
 
-			InsertionSort(array,size);
+			SelectionSort(array,size);
 
 			auto end=system_clock::now();
 			auto duration=duration_cast<microseconds>(end-start);
@@ -230,13 +224,12 @@ void insertion_sort_double(int size)
 
 		cout << "排序花費時間:";
 		cout << fixed << setprecision(100) << time/1000000 << "秒" << endl;
-    	delete [] array;
 	}
 	else
 	{
 		auto start=system_clock::now();
 
-		InsertionSort(array,size);
+		SelectionSort(array,size);
 
 		auto end=system_clock::now();
 		auto duration=duration_cast<microseconds>(end-start);
@@ -248,26 +241,28 @@ void insertion_sort_double(int size)
 
 		cout << "排序花費時間:";
 		cout << fixed << setprecision(100) << time << "秒" << endl;
-    	delete [] array;
 	}
 }
 
-void insertion_sort_string(int size)
+void selection_sort_string(int size)
 {
-	cout << "<< insertion sort (string) " << size << "筆測試資料 >>" << endl;
-
-	//隨機生成數字陣列
-	srand(time(NULL));
-	string alphabet="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	cout << "<< selection sort (string) " << size << "筆測試資料 >>" << endl;
 	
-	string *array=new string[size];
-	for(int i=0;i<size;i++)
+	//隨機生成數字陣列
+	vector<string> array;
+    for(int i=0;i<size;i++)
     {
+        string alphabet="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        string str;
+        random_device rd;
+	    mt19937 gen(rd());
+	    uniform_int_distribution<>dist(0,51);
         for(int j=0;j<6;j++)
         {
-            char ch=alphabet[rand()%alphabet.size()];
-            array[i].append(1,ch);
+            string s(1,alphabet[dist(gen)]);
+            str.append(s);
         }
+        array.push_back(str);
     }
 
 	// cout << "隨機生成的陣列:";
@@ -276,7 +271,7 @@ void insertion_sort_string(int size)
 	//開始排序
 	auto start=system_clock::now();
 	
-	InsertionSort(array,size);
+	SelectionSort(array,size);
 	
 	auto end=system_clock::now();
 	auto duration=duration_cast<microseconds>(end-start);
@@ -287,5 +282,4 @@ void insertion_sort_string(int size)
 
 	cout << "排序花費時間:";
 	cout << fixed << setprecision(100) << time << "秒" << endl;
-	delete [] array;
 }
