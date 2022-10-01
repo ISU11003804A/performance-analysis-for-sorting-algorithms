@@ -265,7 +265,7 @@ void insertion_sort_string(int size)
     {
         for(int j=0;j<6;j++)
         {
-            char ch=alphabet[rand()%alphabet.size()];
+            string ch=alphabet[rand()%alphabet.size()];
             array[i].append(1,ch);
         }
     }

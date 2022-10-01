@@ -127,6 +127,6 @@ void MergeSort(T *arr,int size)
 	MergeSort(R,size-mid);
 	Merge(arr,L,mid,R,size-mid);
 	
-	delete [] R;
 	delete [] L;
+	delete [] R;
 }
