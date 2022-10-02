@@ -4,8 +4,8 @@
 using namespace std;
 
 // merge_sort
-template <class T>
-void Merge(T &arr,T &L,int leftCount,T &R,int rightCount)
+template <class T, class U>
+void Merge(T &arr,U &L,int leftCount,U &R,int rightCount)
 {
 	int i,j,k;
 	
@@ -34,16 +34,25 @@ void Merge(T &arr,T &L,int leftCount,T &R,int rightCount)
 	}
 }
 
-template <class T>
-void MergeSort(T &arr,int size)
+template <class T, class U>
+void MergeSort(T &arr,int size,U &typ)
 {
 	if(size<2)
 	{
 		return;
 	}
-    array<T,1000000> L;
-    array<T,1000000> R;
-	 
+    
+    // typeid().name
+    
+    // if((typeid(arr[0]).name())==(typeid(0).name()))
+    // {
+    //     array<int,1000000> L;
+    //     array<int,1000000> R;
+    // }
+    
+    array<U,1000000> L;
+    array<U,1000000> R;
+	
 	int mid=size/2;
 
 	for(int i=0;i<mid;i++)
@@ -56,20 +65,22 @@ void MergeSort(T &arr,int size)
 		R[i-mid]=arr[i];
 	}
 	
-	MergeSort(L,mid);
-	MergeSort(R,size-mid);
+	MergeSort(L,mid,L[0]);
+	MergeSort(R,size-mid,R[0]);
 	Merge(arr,L,mid,R,size-mid);
 }
 
 int main()
 {
-    array<int,5> array={1,5,4,3,2};
-    // array<string,5> array={"e","a","c","b","d"};
-    MergeSort(array,5);
+    // array<int,5> array={1,5,4,3,2};
+    array<string,5> array={"e","a","c","b","d"};
+    
+    // cout << typeid(typeid(array[0]).name()).name() << endl;
+    
+    MergeSort(array,5,array[0]);
     for(int i=0;i<5;i++)
     {
         cout << array[i] << endl;
     }
     return 0;
-    //d
 }

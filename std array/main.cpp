@@ -8,8 +8,8 @@ using namespace std;
 
 int main()
 {
-    // insertion_sort_int(10);
-    merge_sort_int(100000);
+    //insertion_sort_int(10);
+    merge_sort_string(1000);
 
     return 0;
 }
