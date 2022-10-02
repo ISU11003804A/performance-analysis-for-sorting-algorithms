@@ -71,4 +71,5 @@ int main()
         cout << array[i] << endl;
     }
     return 0;
+    //d
 }
