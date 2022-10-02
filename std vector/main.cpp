@@ -9,7 +9,7 @@ using namespace std;
 int main()
 {
     int data_value[11]={10,20,30,40,50,60,100000,200000,300000,400000,500000};
-
+    
     
     // insertion_sort
     for(int i=0;i<11;i++)
@@ -117,7 +117,7 @@ int main()
     {
         merge_sort_string(data_value[i]);
     }
-    
+
     system("pause");
     return 0;
 }

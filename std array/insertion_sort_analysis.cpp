@@ -5,6 +5,7 @@
 #include<iomanip>
 #include<random>
 #include<ctime>
+#include<array>
 using namespace std;
 using namespace chrono;
 
@@ -17,7 +18,7 @@ void insertion_sort_int(int size)
 	mt19937 gen(rd());
 	uniform_int_distribution<>dist(1,2000000000);
 	
-	int *array=new int[size];
+    array<int,1000000> array;
 	for (int i=0;i<size;i++)
 	{
 		array[i]=dist(gen);
@@ -47,7 +48,6 @@ void insertion_sort_int(int size)
 
 		cout << "排序花費時間:";
 		cout << fixed << setprecision(100) << time/1000000 << "秒" << endl;
-    	delete [] array;
 	}
 	else
 	{
@@ -65,7 +65,6 @@ void insertion_sort_int(int size)
 
 		cout << "排序花費時間:";
 		cout << fixed << setprecision(100) << time << "秒" << endl;
-    	delete [] array;
 	}
 }
 
@@ -78,7 +77,7 @@ void insertion_sort_long(int size)
 	mt19937 gen(rd());
 	uniform_int_distribution<long long>dist(1000000000,9000000000); 
 	
-	long long *array=new long long[size];
+	array<long,1000000> array;
 	for (int i=0;i<size;i++)
 	{
 		array[i]=dist(gen);
@@ -108,7 +107,6 @@ void insertion_sort_long(int size)
 
 		cout << "排序花費時間:";
 		cout << fixed << setprecision(100) << time/1000000 << "秒" << endl;
-    	delete [] array;
 	}
 	else
 	{
@@ -126,7 +124,6 @@ void insertion_sort_long(int size)
 
 		cout << "排序花費時間:";
 		cout << fixed << setprecision(100) << time << "秒" << endl;
-		delete [] array;
 	}
 }
 
@@ -139,7 +136,7 @@ void insertion_sort_float(int size)
 	mt19937 gen(rd());
 	uniform_real_distribution<float>dist(1,10000);
 	
-	float *array=new float[size];
+	array<float,1000000> array;
 	for (int i=0;i<size;i++)
 	{
 		array[i]=dist(gen);
@@ -169,7 +166,6 @@ void insertion_sort_float(int size)
 
 		cout << "排序花費時間:";
 		cout << fixed << setprecision(100) << time/1000000 << "秒" << endl;
-    	delete [] array;
 	}
 	else
 	{
@@ -187,7 +183,6 @@ void insertion_sort_float(int size)
 
 		cout << "排序花費時間:";
 		cout << fixed << setprecision(100) << time << "秒" << endl;
-    	delete [] array;
 	}
 }
 
@@ -200,7 +195,7 @@ void insertion_sort_double(int size)
 	mt19937 gen(rd());
 	uniform_real_distribution<double>dist(1,10000);
 	
-	double *array=new double[size];
+	array<double,1000000> array;
 	for (int i=0;i<size;i++)
 	{
 		array[i]=dist(gen);
@@ -230,7 +225,6 @@ void insertion_sort_double(int size)
 
 		cout << "排序花費時間:";
 		cout << fixed << setprecision(100) << time/1000000 << "秒" << endl;
-    	delete [] array;
 	}
 	else
 	{
@@ -248,26 +242,28 @@ void insertion_sort_double(int size)
 
 		cout << "排序花費時間:";
 		cout << fixed << setprecision(100) << time << "秒" << endl;
-    	delete [] array;
 	}
 }
 
 void insertion_sort_string(int size)
 {
 	cout << "<< insertion sort (string) " << size << "筆測試資料 >>" << endl;
-
+	
 	//隨機生成數字陣列
-	srand(time(NULL));
+    srand(time(NULL));
 	string alphabet="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	
-	string *array=new string[size];
+	array<string,1000000> array;
 	for(int i=0;i<size;i++)
     {
+        string str;
         for(int j=0;j<6;j++)
         {
-            char ch=alphabet[rand()%alphabet.size()];
-            array[i].append(1,ch);
+            
+            string s(1,alphabet[rand()%alphabet.size()]) ;
+            str.append(s);
         }
+        array[i]=str;
     }
 
 	// cout << "隨機生成的陣列:";
@@ -287,5 +283,4 @@ void insertion_sort_string(int size)
 
 	cout << "排序花費時間:";
 	cout << fixed << setprecision(100) << time << "秒" << endl;
-	delete [] array;
 }

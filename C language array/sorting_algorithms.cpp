@@ -108,7 +108,7 @@ void MergeSort(T *arr,int size)
 		return;
 	}
 	 
-	mid = size/2;
+	mid=size/2;
 
 	L=new T[mid];
 	R=new T[size-mid];
