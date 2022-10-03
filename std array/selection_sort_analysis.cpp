@@ -142,8 +142,8 @@ void selection_sort_float(int size)
 		array[i]=dist(gen);
 	}
 	
-	cout << "隨機生成的陣列:";
-	PrintArray(array,size);
+	// cout << "隨機生成的陣列:";
+	// PrintArray(array,size);
 
 	//開始排序
 	double time;
@@ -161,8 +161,8 @@ void selection_sort_float(int size)
 			time+=temp;
 		}
 
-		cout << "排序完成的陣列:";
-    	PrintArray(array,size);
+		// cout << "排序完成的陣列:";
+    	// PrintArray(array,size);
 
 		cout << "排序花費時間:";
 		cout << fixed << setprecision(100) << time/1000000 << "秒" << endl;
