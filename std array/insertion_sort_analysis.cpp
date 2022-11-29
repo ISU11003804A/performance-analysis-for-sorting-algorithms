@@ -11,23 +11,23 @@ using namespace chrono;
 
 void insertion_sort_int(int size)
 {
-	cout << "<< insertion sort (int) " << size << "µß¥˙∏’∏ÍÆ∆ >>" << endl;
+	cout << "<< insertion sort (int) " << size << "Á≠ÜÊ∏¨Ë©¶Ë≥áÊñô >>" << endl;
 
-	//¿Hæ˜•Õ¶®º∆¶r∞}¶C
+	//Èö®Ê©üÁîüÊàêÊï∏Â≠óÈô£Âàó
 	random_device rd;
 	mt19937 gen(rd());
 	uniform_int_distribution<>dist(1,2000000000);
 	
-    array<int,1000000> array;
+    	array<int,1000000> array;
 	for (int i=0;i<size;i++)
 	{
 		array[i]=dist(gen);
 	}
 	
-	// cout << "¿Hæ˜•Õ¶®™∫∞}¶C:";
+	// cout << "Èö®Ê©üÁîüÊàêÁöÑÈô£Âàó:";
 	// PrintArray(array,size);
 
-	//∂}©l±∆ß«
+	//ÈñãÂßãÊéíÂ∫è
 	double time;
 	if(size<100)
 	{
@@ -39,15 +39,15 @@ void insertion_sort_int(int size)
 
 			auto end=system_clock::now();
 			auto duration=duration_cast<microseconds>(end-start);
-			double temp=(double(duration.count()))*microseconds::period::num/microseconds::period::den; //≥Ê¶Ï:¨Ì
+			double temp=(double(duration.count()))*microseconds::period::num/microseconds::period::den; //ÂñÆ‰Ωç:Áßí
 			time+=temp;
 		}
 
-		// cout << "±∆ß«ßπ¶®™∫∞}¶C:";
-    	// PrintArray(array,size);
+		// cout << "ÊéíÂ∫èÂÆåÊàêÁöÑÈô£Âàó:";
+    		// PrintArray(array,size);
 
-		cout << "±∆ß«™·∂OÆ…∂°:";
-		cout << fixed << setprecision(100) << time/1000000 << "¨Ì" << endl;
+		cout << "ÊéíÂ∫èËä±Ë≤ªÊôÇÈñì:";
+		cout << fixed << setprecision(100) << time/1000000 << "Áßí" << endl;
 	}
 	else
 	{
@@ -57,22 +57,22 @@ void insertion_sort_int(int size)
 
 		auto end=system_clock::now();
 		auto duration=duration_cast<microseconds>(end-start);
-		double temp=(double(duration.count()))*microseconds::period::num/microseconds::period::den; //≥Ê¶Ï:¨Ì
+		double temp=(double(duration.count()))*microseconds::period::num/microseconds::period::den; //ÂñÆ‰Ωç:Áßí
 		time=temp;
 
-		// cout << "±∆ß«ßπ¶®™∫∞}¶C:";
-    	// PrintArray(array,size);
+		// cout << "ÊéíÂ∫èÂÆåÊàêÁöÑÈô£Âàó:";
+    		// PrintArray(array,size);
 
-		cout << "±∆ß«™·∂OÆ…∂°:";
-		cout << fixed << setprecision(100) << time << "¨Ì" << endl;
+		cout << "ÊéíÂ∫èËä±Ë≤ªÊôÇÈñì:";
+		cout << fixed << setprecision(100) << time << "Áßí" << endl;
 	}
 }
 
 void insertion_sort_long(int size)
 {
-	cout << "<< insertion sort (long) " << size << "µß¥˙∏’∏ÍÆ∆ >>" << endl;
+	cout << "<< insertion sort (long) " << size << "Á≠ÜÊ∏¨Ë©¶Ë≥áÊñô >>" << endl;
 	
-	//¿Hæ˜•Õ¶®º∆¶r∞}¶C
+	//Èö®Ê©üÁîüÊàêÊï∏Â≠óÈô£Âàó
 	random_device rd;
 	mt19937 gen(rd());
 	uniform_int_distribution<long long>dist(1000000000,9000000000); 
@@ -83,10 +83,10 @@ void insertion_sort_long(int size)
 		array[i]=dist(gen);
 	}
 	
-	// cout << "¿Hæ˜•Õ¶®™∫∞}¶C:";
+	// cout << "Èö®Ê©üÁîüÊàêÁöÑÈô£Âàó:";
 	// PrintArray(array,size);
 
-	//∂}©l±∆ß«
+	//ÈñãÂßãÊéíÂ∫è
 	double time;
 	if(size<100)
 	{
@@ -98,15 +98,15 @@ void insertion_sort_long(int size)
 
 			auto end=system_clock::now();
 			auto duration=duration_cast<microseconds>(end-start);
-			double temp=(double(duration.count()))*microseconds::period::num/microseconds::period::den; //≥Ê¶Ï:¨Ì
+			double temp=(double(duration.count()))*microseconds::period::num/microseconds::period::den; //ÂñÆ‰Ωç:Áßí
 			time+=temp;
 		}
 
-		// cout << "±∆ß«ßπ¶®™∫∞}¶C:";
-    	// PrintArray(array,size);
+		// cout << "ÊéíÂ∫èÂÆåÊàêÁöÑÈô£Âàó:";
+    		// PrintArray(array,size);
 
-		cout << "±∆ß«™·∂OÆ…∂°:";
-		cout << fixed << setprecision(100) << time/1000000 << "¨Ì" << endl;
+		cout << "ÊéíÂ∫èËä±Ë≤ªÊôÇÈñì:";
+		cout << fixed << setprecision(100) << time/1000000 << "Áßí" << endl;
 	}
 	else
 	{
@@ -116,22 +116,22 @@ void insertion_sort_long(int size)
 
 		auto end=system_clock::now();
 		auto duration=duration_cast<microseconds>(end-start);
-		double temp=(double(duration.count()))*microseconds::period::num/microseconds::period::den; //≥Ê¶Ï:¨Ì
+		double temp=(double(duration.count()))*microseconds::period::num/microseconds::period::den; //ÂñÆ‰Ωç:Áßí
 		time=temp;
 
-		// cout << "±∆ß«ßπ¶®™∫∞}¶C:";
-    	// PrintArray(array,size);
+		// cout << "ÊéíÂ∫èÂÆåÊàêÁöÑÈô£Âàó:";
+    		// PrintArray(array,size);
 
-		cout << "±∆ß«™·∂OÆ…∂°:";
-		cout << fixed << setprecision(100) << time << "¨Ì" << endl;
+		cout << "ÊéíÂ∫èËä±Ë≤ªÊôÇÈñì:";
+		cout << fixed << setprecision(100) << time << "Áßí" << endl;
 	}
 }
 
 void insertion_sort_float(int size)
 {
-	cout << "<< insertion sort (float) " << size << "µß¥˙∏’∏ÍÆ∆ >>" << endl;
+	cout << "<< insertion sort (float) " << size << "Á≠ÜÊ∏¨Ë©¶Ë≥áÊñô >>" << endl;
 	
-	//¿Hæ˜•Õ¶®º∆¶r∞}¶C
+	//Èö®Ê©üÁîüÊàêÊï∏Â≠óÈô£Âàó
 	random_device rd;
 	mt19937 gen(rd());
 	uniform_real_distribution<float>dist(1,10000);
@@ -142,10 +142,10 @@ void insertion_sort_float(int size)
 		array[i]=dist(gen);
 	}
 	
-	// cout << "¿Hæ˜•Õ¶®™∫∞}¶C:";
+	// cout << "Èö®Ê©üÁîüÊàêÁöÑÈô£Âàó:";
 	// PrintArray(array,size);
 
-	//∂}©l±∆ß«
+	//ÈñãÂßãÊéíÂ∫è
 	double time;
 	if(size<100)
 	{
@@ -157,15 +157,15 @@ void insertion_sort_float(int size)
 
 			auto end=system_clock::now();
 			auto duration=duration_cast<microseconds>(end-start);
-			double temp=(double(duration.count()))*microseconds::period::num/microseconds::period::den; //≥Ê¶Ï:¨Ì
+			double temp=(double(duration.count()))*microseconds::period::num/microseconds::period::den; //ÂñÆ‰Ωç:Áßí
 			time+=temp;
 		}
 
-		// cout << "±∆ß«ßπ¶®™∫∞}¶C:";
-    	// PrintArray(array,size);
+		// cout << "ÊéíÂ∫èÂÆåÊàêÁöÑÈô£Âàó:";
+    		// PrintArray(array,size);
 
-		cout << "±∆ß«™·∂OÆ…∂°:";
-		cout << fixed << setprecision(100) << time/1000000 << "¨Ì" << endl;
+		cout << "ÊéíÂ∫èËä±Ë≤ªÊôÇÈñì:";
+		cout << fixed << setprecision(100) << time/1000000 << "Áßí" << endl;
 	}
 	else
 	{
@@ -175,22 +175,22 @@ void insertion_sort_float(int size)
 
 		auto end=system_clock::now();
 		auto duration=duration_cast<microseconds>(end-start);
-		double temp=(double(duration.count()))*microseconds::period::num/microseconds::period::den; //≥Ê¶Ï:¨Ì
+		double temp=(double(duration.count()))*microseconds::period::num/microseconds::period::den; //ÂñÆ‰Ωç:Áßí
 		time=temp;
 
-		// cout << "±∆ß«ßπ¶®™∫∞}¶C:";
-    	// PrintArray(array,size);
+		// cout << "ÊéíÂ∫èÂÆåÊàêÁöÑÈô£Âàó:";
+    		// PrintArray(array,size);
 
-		cout << "±∆ß«™·∂OÆ…∂°:";
-		cout << fixed << setprecision(100) << time << "¨Ì" << endl;
+		cout << "ÊéíÂ∫èËä±Ë≤ªÊôÇÈñì:";
+		cout << fixed << setprecision(100) << time << "Áßí" << endl;
 	}
 }
 
 void insertion_sort_double(int size)
 {
-	cout << "<< insertion sort (double) " << size << "µß¥˙∏’∏ÍÆ∆ >>" << endl;
+	cout << "<< insertion sort (double) " << size << "Á≠ÜÊ∏¨Ë©¶Ë≥áÊñô >>" << endl;
 	
-	//¿Hæ˜•Õ¶®º∆¶r∞}¶C
+	//Èö®Ê©üÁîüÊàêÊï∏Â≠óÈô£Âàó
 	random_device rd;
 	mt19937 gen(rd());
 	uniform_real_distribution<double>dist(1,10000);
@@ -201,10 +201,10 @@ void insertion_sort_double(int size)
 		array[i]=dist(gen);
 	}
 	
-	// cout << "¿Hæ˜•Õ¶®™∫∞}¶C:";
+	// cout << "Èö®Ê©üÁîüÊàêÁöÑÈô£Âàó:";
 	// PrintArray(array,size);
 
-	//∂}©l±∆ß«
+	//ÈñãÂßãÊéíÂ∫è
 	double time;
 	if(size<100)
 	{
@@ -216,15 +216,15 @@ void insertion_sort_double(int size)
 
 			auto end=system_clock::now();
 			auto duration=duration_cast<microseconds>(end-start);
-			double temp=(double(duration.count()))*microseconds::period::num/microseconds::period::den; //≥Ê¶Ï:¨Ì
+			double temp=(double(duration.count()))*microseconds::period::num/microseconds::period::den; //ÂñÆ‰Ωç:Áßí
 			time+=temp;
 		}
 
-		// cout << "±∆ß«ßπ¶®™∫∞}¶C:";
-    	// PrintArray(array,size);
+		// cout << "ÊéíÂ∫èÂÆåÊàêÁöÑÈô£Âàó:";
+    		// PrintArray(array,size);
 
-		cout << "±∆ß«™·∂OÆ…∂°:";
-		cout << fixed << setprecision(100) << time/1000000 << "¨Ì" << endl;
+		cout << "ÊéíÂ∫èËä±Ë≤ªÊôÇÈñì:";
+		cout << fixed << setprecision(100) << time/1000000 << "Áßí" << endl;
 	}
 	else
 	{
@@ -234,53 +234,52 @@ void insertion_sort_double(int size)
 
 		auto end=system_clock::now();
 		auto duration=duration_cast<microseconds>(end-start);
-		double temp=(double(duration.count()))*microseconds::period::num/microseconds::period::den; //≥Ê¶Ï:¨Ì
+		double temp=(double(duration.count()))*microseconds::period::num/microseconds::period::den; //ÂñÆ‰Ωç:Áßí
 		time=temp;
 
-		// cout << "±∆ß«ßπ¶®™∫∞}¶C:";
-    	// PrintArray(array,size);
+		// cout << "ÊéíÂ∫èÂÆåÊàêÁöÑÈô£Âàó:";
+    		// PrintArray(array,size);
 
-		cout << "±∆ß«™·∂OÆ…∂°:";
-		cout << fixed << setprecision(100) << time << "¨Ì" << endl;
+		cout << "ÊéíÂ∫èËä±Ë≤ªÊôÇÈñì:";
+		cout << fixed << setprecision(100) << time << "Áßí" << endl;
 	}
 }
 
 void insertion_sort_string(int size)
 {
-	cout << "<< insertion sort (string) " << size << "µß¥˙∏’∏ÍÆ∆ >>" << endl;
+	cout << "<< insertion sort (string) " << size << "Á≠ÜÊ∏¨Ë©¶Ë≥áÊñô >>" << endl;
 	
-	//¿Hæ˜•Õ¶®º∆¶r∞}¶C
-    srand(time(NULL));
+	//Èö®Ê©üÁîüÊàêÊï∏Â≠óÈô£Âàó
+    	srand(time(NULL));
 	string alphabet="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	
 	array<string,1000000> array;
 	for(int i=0;i<size;i++)
-    {
-        string str;
-        for(int j=0;j<6;j++)
-        {
-            
-            string s(1,alphabet[rand()%alphabet.size()]) ;
-            str.append(s);
-        }
-        array[i]=str;
-    }
+    	{
+        	string str;
+        	for(int j=0;j<6;j++)
+        	{
+           		string s(1,alphabet[rand()%alphabet.size()]) ;
+           		str.append(s);
+        	}
+        	array[i]=str;
+    	}
 
-	// cout << "¿Hæ˜•Õ¶®™∫∞}¶C:";
+	// cout << "Èö®Ê©üÁîüÊàêÁöÑÈô£Âàó:";
 	// PrintArray(array,size);
 
-	//∂}©l±∆ß«
+	//ÈñãÂßãÊéíÂ∫è
 	auto start=system_clock::now();
 	
 	InsertionSort(array,size);
 	
 	auto end=system_clock::now();
 	auto duration=duration_cast<microseconds>(end-start);
-	double time=(double(duration.count()))*microseconds::period::num/microseconds::period::den; //≥Ê¶Ï:¨Ì
+	double time=(double(duration.count()))*microseconds::period::num/microseconds::period::den; //ÂñÆ‰Ωç:Áßí
 
-	// cout << "±∆ß«ßπ¶®™∫∞}¶C:";
-    // PrintArray(array,size);
+	// cout << "ÊéíÂ∫èÂÆåÊàêÁöÑÈô£Âàó:";
+    	// PrintArray(array,size);
 
-	cout << "±∆ß«™·∂OÆ…∂°:";
-	cout << fixed << setprecision(100) << time << "¨Ì" << endl;
+	cout << "ÊéíÂ∫èËä±Ë≤ªÊôÇÈñì:";
+	cout << fixed << setprecision(100) << time << "Áßí" << endl;
 }
