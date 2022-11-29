@@ -5,28 +5,28 @@ using namespace std;
 template <class T>
 void PrintArray(T *arr, int size)
 {
-    for (int i=0;i<size;i++)
+	for (int i=0;i<size;i++)
 	{
-        cout << arr[i] << " ";
-    }
-    cout << endl;
+        	cout << arr[i] << " ";
+	}
+	cout << endl;
 }
 
 // insertion_sort
 template <class T>
 void InsertionSort(T *arr,int size)
 {
-    for (int i=1;i<size;i++)
+	for (int i=1;i<size;i++)
 	{
-        T key=arr[i];
-        int j=i-1;
-        while(key<arr[j]&&j>=0)
+        	T key=arr[i];
+        	int j=i-1;
+        	while(key<arr[j]&&j>=0)
 		{
-            arr[j+1]=arr[j];
-            j--;
-        }
-        arr[j+1]=key;
-    }
+        		arr[j+1]=arr[j];
+            		j--;
+        	}
+        	arr[j+1]=key;
+	}
 }
 
 // selection_sort
@@ -34,18 +34,18 @@ template <class T>
 void SelectionSort(T *arr,int size)
 {
 	for(int i=0;i<size;i++)
-    {
+    	{
 		for(int j=i+1;j<size;j++)
-        {
-            if(arr[i]>arr[j])
-            {
-                T temp;
+        	{
+            		if(arr[i]>arr[j])
+            		{
+                		T temp;
 				temp=arr[i];
-                arr[i]=arr[j];
-                arr[j]=temp;
-            }
-        }
-    }
+                		arr[i]=arr[j];
+                		arr[j]=temp;
+            		}
+        	}
+    	}
 }
 
 // bubble_sort
@@ -54,16 +54,16 @@ void BubbleSort(T *arr,int size)
 {
 	for(int i=size-1;i>0;i--)
 	{
-    	for(int j=0;j<=i-1;j++)
-    	{
-        	if(arr[j]>arr[j+1])
-        	{
-            	T temp;
+    		for(int j=0;j<=i-1;j++)
+    		{
+        		if(arr[j]>arr[j+1])
+        		{
+            			T temp;
 				temp=arr[j];
-            	arr[j]=arr[j+1];
-            	arr[j+1]=temp;
-        	}
-    	}
+            			arr[j]=arr[j+1];
+            			arr[j+1]=temp;
+        		}
+    		}
 	}
 }
 
